@@ -1,0 +1,116 @@
+#logging:  # 使用配置 无法打印 分页插件函数
+#  config: classpath:logback.xml
+#  path: d:/logs
+server:
+  port: 80
+  session-timeout: 60
+
+
+mybatis:
+     mapperLocations: classpath:mapping/*.xml
+     typeAliasesPackage: com.clom.my.dao
+     mapperScanPackage: com.clom.my.dao
+     configLocation: classpath:/mybatis-config.xml
+spring:
+  redis: ## redis 配置
+    database: 1
+    host: 192.168.228.129
+    port: 6379
+    password: luwanding
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+    timeout: 5000
+  freemarker:
+    allowRequestOverride: false
+    allowSessionOverride: false
+    cache: true
+    checkTemplateLocation: true
+    contentType: text/html
+    exposeRequestAttributes: false
+    exposeSessionAttributes: false
+    exposeSpringMacroHelpers: false
+    suffix: .ftl
+    templateEncoding: UTF-8
+    templateLoaderPath: classpath:/templates/ftl  #表示所有的模板文件都放在该目录下
+    spring.freemarker.settings:
+      locale: zh_CN
+      date_format: yyyy-MM-dd
+      time_format: HH:mm:ss
+      datetime_format: yyyy-MM-dd HH:mm:ss
+
+mysql:
+    datasource:
+        readSize: 2  #读库个数
+        type: com.alibaba.druid.pool.DruidDataSource
+        mapperLocations: classpath:mapping/*.xml
+        configLocation: classpath:/mybatis-config.xml
+        write:
+           url: jdbc:mysql://7ipvt6lj.2301.dnstoo.com:5504/fqapic0b
+           username: fqapic0b_f
+           password: luwanding
+           driver-class-name: com.mysql.jdbc.Driver
+           minIdle: 5
+           maxActive: 100
+           initialSize: 10
+           maxWait: 60000
+           timeBetweenEvictionRunsMillis: 60000
+           minEvictableIdleTimeMillis: 300000
+           validationQuery: select 'x'
+           testWhileIdle: true
+           testOnBorrow: false
+           testOnReturn: false
+           poolPreparedStatements: true
+           maxPoolPreparedStatementPerConnectionSize: 50
+           removeAbandoned: true
+           filters: stat
+        read01:
+           url: jdbc:mysql://7ipvt6lj.2301.dnstoo.com:5504/fqapic0b
+           username: fqapic0b_f
+           password: luwanding
+           driver-class-name: com.mysql.jdbc.Driver
+           minIdle: 5
+           maxActive: 100
+           initialSize: 10
+           maxWait: 60000
+           timeBetweenEvictionRunsMillis: 60000
+           minEvictableIdleTimeMillis: 300000
+           validationQuery: select 'x'
+           testWhileIdle: true
+           testOnBorrow: false
+           testOnReturn: false
+           poolPreparedStatements: true
+           maxPoolPreparedStatementPerConnectionSize: 50
+           removeAbandoned: true
+           filters: stat
+        read02:
+           url: jdbc:mysql://7ipvt6lj.2301.dnstoo.com:5504/fqapic0b
+           username: fqapic0b_f
+           password: luwanding
+           driver-class-name: com.mysql.jdbc.Driver
+           minIdle: 5
+           maxActive: 100
+           initialSize: 10
+           maxWait: 60000
+           timeBetweenEvictionRunsMillis: 60000
+           minEvictableIdleTimeMillis: 300000
+           validationQuery: select 'x'
+           testWhileIdle: true
+           testOnBorrow: false
+           testOnReturn: false
+           poolPreparedStatements: true
+           maxPoolPreparedStatementPerConnectionSize: 50
+           removeAbandoned: true
+           filters: stat
+
+logging: #执行mybatis执行的sql
+  level:
+    com.clom.my.dao: debug  #debug 显示执行的sql   trace 显示查询sql以及查询结果
+    com.clom.my.controller: debug
+    com.clom.my.service: debug
+#日志颜色
+output:
+  ansi:
+    enabled: ALWAYS

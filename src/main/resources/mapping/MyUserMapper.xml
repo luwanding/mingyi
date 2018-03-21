@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.clom.my.dao.MyUserMapper" >
+  <resultMap id="BaseResultMap" type="com.clom.my.model.MyUser" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="pwd" property="pwd" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="qq" property="qq" jdbcType="VARCHAR" />
+    <result column="wx" property="wx" jdbcType="VARCHAR" />
+    <result column="wb" property="wb" jdbcType="VARCHAR" />
+    <result column="pwd_clear" property="pwdClear" jdbcType="VARCHAR" />
+    <result column="isperfect" property="isperfect" jdbcType="SMALLINT" />
+    <result column="createby" property="createby" jdbcType="VARCHAR" />
+    <result column="createdate" property="createdate" jdbcType="TIMESTAMP" />
+    <result column="updateby" property="updateby" jdbcType="VARCHAR" />
+    <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP" />
+    <result column="activeflag" property="activeflag" jdbcType="SMALLINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, pwd, phone, email, address, qq, wx, wb, pwd_clear, isperfect, createby, 
+    createdate, updateby, updatedate, activeflag
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from my_user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAllUser"  resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from my_user where activeflag = 1
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from my_user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.clom.my.model.MyUser" >
+    insert into my_user (id, name, pwd, 
+      phone, email, address, 
+      qq, wx, wb, pwd_clear, 
+      isperfect, createby, createdate, 
+      updateby, updatedate, activeflag
+      )
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{qq,jdbcType=VARCHAR}, #{wx,jdbcType=VARCHAR}, #{wb,jdbcType=VARCHAR}, #{pwdClear,jdbcType=VARCHAR}, 
+      #{isperfect,jdbcType=SMALLINT}, #{createby,jdbcType=VARCHAR}, #{createdate,jdbcType=TIMESTAMP}, 
+      #{updateby,jdbcType=VARCHAR}, #{updatedate,jdbcType=TIMESTAMP}, #{activeflag,jdbcType=SMALLINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.clom.my.model.MyUser" >
+    insert into my_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="pwd != null" >
+        pwd,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="qq != null" >
+        qq,
+      </if>
+      <if test="wx != null" >
+        wx,
+      </if>
+      <if test="wb != null" >
+        wb,
+      </if>
+      <if test="pwdClear != null" >
+        pwd_clear,
+      </if>
+      <if test="isperfect != null" >
+        isperfect,
+      </if>
+      <if test="createby != null" >
+        createby,
+      </if>
+      <if test="createdate != null" >
+        createdate,
+      </if>
+      <if test="updateby != null" >
+        updateby,
+      </if>
+      <if test="updatedate != null" >
+        updatedate,
+      </if>
+      <if test="activeflag != null" >
+        activeflag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null" >
+        #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null" >
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="wx != null" >
+        #{wx,jdbcType=VARCHAR},
+      </if>
+      <if test="wb != null" >
+        #{wb,jdbcType=VARCHAR},
+      </if>
+      <if test="pwdClear != null" >
+        #{pwdClear,jdbcType=VARCHAR},
+      </if>
+      <if test="isperfect != null" >
+        #{isperfect,jdbcType=SMALLINT},
+      </if>
+      <if test="createby != null" >
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateby != null" >
+        #{updateby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedate != null" >
+        #{updatedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="activeflag != null" >
+        #{activeflag,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.clom.my.model.MyUser" >
+    update my_user
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null" >
+        pwd = #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null" >
+        qq = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="wx != null" >
+        wx = #{wx,jdbcType=VARCHAR},
+      </if>
+      <if test="wb != null" >
+        wb = #{wb,jdbcType=VARCHAR},
+      </if>
+      <if test="pwdClear != null" >
+        pwd_clear = #{pwdClear,jdbcType=VARCHAR},
+      </if>
+      <if test="isperfect != null" >
+        isperfect = #{isperfect,jdbcType=SMALLINT},
+      </if>
+      <if test="createby != null" >
+        createby = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        createdate = #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateby != null" >
+        updateby = #{updateby,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedate != null" >
+        updatedate = #{updatedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="activeflag != null" >
+        activeflag = #{activeflag,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.clom.my.model.MyUser" >
+    update my_user
+    set name = #{name,jdbcType=VARCHAR},
+      pwd = #{pwd,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=VARCHAR},
+      wx = #{wx,jdbcType=VARCHAR},
+      wb = #{wb,jdbcType=VARCHAR},
+      pwd_clear = #{pwdClear,jdbcType=VARCHAR},
+      isperfect = #{isperfect,jdbcType=SMALLINT},
+      createby = #{createby,jdbcType=VARCHAR},
+      createdate = #{createdate,jdbcType=TIMESTAMP},
+      updateby = #{updateby,jdbcType=VARCHAR},
+      updatedate = #{updatedate,jdbcType=TIMESTAMP},
+      activeflag = #{activeflag,jdbcType=SMALLINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

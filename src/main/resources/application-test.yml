@@ -1,0 +1,111 @@
+server:
+  port: 80
+
+spring:
+      datasource:
+        read: get,select,count,list,query
+        write: add,create,update,delete,remove,insert
+        type: com.alibaba.druid.pool.DruidDataSource
+        readSize: 2 # 读库大小
+        master:
+          name: master  # 标识 请勿重复
+          url: jdbc:mysql://7ipvt6lj.2301.dnstoo.com:5504/fqapic0b
+          username: fqapic0b_f
+          password: luwanding
+          driver-class-name: com.mysql.jdbc.Driver
+          filters: stat
+          filters: stat
+          maxActive: 20
+          initialSize: 1
+          maxWait: 60000
+          minIdle: 1
+          timeBetweenEvictionRunsMillis: 60000
+          minEvictableIdleTimeMillis: 300000
+          validationQuery: select 'x'
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          poolPreparedStatements: true
+          maxOpenPreparedStatements: 20
+        slave1:
+          name: slave1 # 标识 请勿重复
+          url: jdbc:mysql://7ipvt6lj.2301.dnstoo.com:5504/fqapic0b
+          username: fqapic0b_f
+          password: luwanding
+          driver-class-name: com.mysql.jdbc.Driver
+          filters: stat
+          filters: stat
+          maxActive: 20
+          initialSize: 1
+          maxWait: 60000
+          minIdle: 1
+          timeBetweenEvictionRunsMillis: 60000
+          minEvictableIdleTimeMillis: 300000
+          validationQuery: select 'x'
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          poolPreparedStatements: true
+          maxOpenPreparedStatements: 20
+        slave2:
+          name: slave2 # 标识 请勿重复
+          url: jdbc:mysql://7ipvt6lj.2301.dnstoo.com:5504/fqapic0b
+          username: fqapic0b_f
+          password: luwanding
+          driver-class-name: com.mysql.jdbc.Driver
+          filters: stat
+          filters: stat
+          maxActive: 20
+          initialSize: 1
+          maxWait: 60000
+          minIdle: 1
+          timeBetweenEvictionRunsMillis: 60000
+          minEvictableIdleTimeMillis: 300000
+          validationQuery: select 'x'
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          poolPreparedStatements: true
+          maxOpenPreparedStatements: 20
+      freemarker:
+            allowRequestOverride: false
+            allowSessionOverride: false
+            cache: true
+            checkTemplateLocation: true
+            contentType: text/html
+            exposeRequestAttributes: false
+            exposeSessionAttributes: false
+            exposeSpringMacroHelpers: false
+            suffix: .ftl
+            templateEncoding: UTF-8
+            templateLoaderPath: classpath:/templates/ftl  #表示所有的模板文件都放在该目录下
+            spring.freemarker.settings:
+                locale: zh_CN
+                date_format: yyyy-MM-dd
+                time_format: HH:mm:ss
+                datetime_format: yyyy-MM-dd HH:mm:ss
+mybatis:
+        mapper-locations: classpath:mapping/*.xml
+        type-aliases-package: com.clom.my.model
+#pagehelper分页插件
+pagehelper:
+        helperDialect: mysql
+        reasonable: true
+        supportMethodsArguments: true
+        params: count=countSql
+logging: #执行mybatis执行的sql
+  level:
+    com.clom.my.dao: trace
+thread:
+    #核心线程数,线程池维护线程的最少数量
+    corePoolSize: 30
+    #线程池维护线程的最大数量
+    maxPoolSize: 50
+    #线程池所使用的缓冲队列
+    queueCapacity: 10000
+    #线程池维护线程所允许的空闲时间
+    keepAliveSeconds: 300000
+#日志颜色
+output:
+  ansi:
+    enabled: ALWAYS

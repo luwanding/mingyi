@@ -1,0 +1,188 @@
+2018-03-12 20:35:11.478  INFO 16308 --- [main] com.clom.my.MingyiApplication            : Starting MingyiApplication on 51jrq with PID 16308 (E:\workplace\project\boot\mingyi\target\classes started by clovermmmmmmmmmmmmm in E:\workplace\project\boot\mingyi)
+2018-03-12 20:35:11.482  INFO 16308 --- [main] com.clom.my.MingyiApplication            : The following profiles are active: dev
+2018-03-12 20:35:11.529  INFO 16308 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a0f1b2e: startup date [Mon Mar 12 20:35:11 CST 2018]; root of context hierarchy
+2018-03-12 20:35:13.171  INFO 16308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2018-03-12 20:35:13.202  INFO 16308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-12 20:35:13.202  INFO 16308 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2018-03-12 20:35:13.213  INFO 16308 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_151\bin;E:\apache-maven-3.5.0\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\Program Files (x86)\gradle-4.3.1\bin;E:\scala-2.12.4\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\apache-ant-1.10.1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;F:\Program Files (x86)\sbt\bin;F:\downloads\play-2.2.6;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;;D:\Program Files\Microsoft VS Code\bin;.]
+2018-03-12 20:35:13.305  INFO 16308 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-12 20:35:13.306  INFO 16308 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1776 ms
+2018-03-12 20:35:13.546  INFO 16308 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-03-12 20:35:13.547  INFO 16308 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet statViewServlet mapped to [/druid/*]
+2018-03-12 20:35:13.551  INFO 16308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-12 20:35:13.552  INFO 16308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-12 20:35:13.552  INFO 16308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-12 20:35:13.552  INFO 16308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-12 20:35:13.552  INFO 16308 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-03-12 20:35:14.338  INFO 16308 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a0f1b2e: startup date [Mon Mar 12 20:35:11 CST 2018]; root of context hierarchy
+2018-03-12 20:35:14.426  INFO 16308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.clom.my.controller.IndexController.index()
+2018-03-12 20:35:14.427  INFO 16308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public org.springframework.web.servlet.ModelAndView com.clom.my.controller.IndexController.indexs()
+2018-03-12 20:35:14.429  INFO 16308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/add],produces=[application/json;charset=UTF-8]}" onto public int com.clom.my.controller.UserController.addUser(com.clom.my.model.User)
+2018-03-12 20:35:14.430  INFO 16308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/all/{pageNum}/{pageSize}],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object com.clom.my.controller.UserController.findAllUser(int,int)
+2018-03-12 20:35:14.435  INFO 16308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-12 20:35:14.435  INFO 16308 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-12 20:35:14.480  INFO 16308 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-12 20:35:14.480  INFO 16308 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-12 20:35:14.528  INFO 16308 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-12 20:35:14.846  INFO 16308 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-03-12 20:35:15.063  INFO 16308 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-12 20:35:15.065  INFO 16308 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-03-12 20:35:15.072  INFO 16308 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-03-12 20:35:15.119  INFO 16308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2018-03-12 20:35:15.123  INFO 16308 --- [main] com.clom.my.MingyiApplication            : Started MingyiApplication in 4.122 seconds (JVM running for 8.467)
+2018-03-15 15:26:15.481  INFO 7332 --- [main] com.clom.my.MingyiApplication            : Starting MingyiApplication on 51jrq with PID 7332 (E:\workplace\project\boot\mingyi\target\classes started by clovermmmmmmmmmmmmm in E:\workplace\project\boot\mingyi)
+2018-03-15 15:26:15.484  INFO 7332 --- [main] com.clom.my.MingyiApplication            : The following profiles are active: dev
+2018-03-15 15:26:15.561  INFO 7332 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@610d672b: startup date [Thu Mar 15 15:26:15 CST 2018]; root of context hierarchy
+2018-03-15 15:26:18.017  INFO 7332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2018-03-15 15:26:18.062  INFO 7332 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-15 15:26:18.062  INFO 7332 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2018-03-15 15:26:18.074  INFO 7332 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_151\bin;E:\apache-maven-3.5.0\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\Program Files (x86)\gradle-4.3.1\bin;E:\scala-2.12.4\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\apache-ant-1.10.1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;F:\Program Files (x86)\sbt\bin;F:\downloads\play-2.2.6;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;;D:\Program Files\Microsoft VS Code\bin;.]
+2018-03-15 15:26:18.209  INFO 7332 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-15 15:26:18.210  INFO 7332 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2649 ms
+2018-03-15 15:26:18.814  INFO 7332 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-03-15 15:26:18.863  INFO 7332 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet statViewServlet mapped to [/druid/*]
+2018-03-15 15:26:18.868  INFO 7332 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-15 15:26:18.868  INFO 7332 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-15 15:26:18.869  INFO 7332 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-15 15:26:18.869  INFO 7332 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-15 15:26:18.869  INFO 7332 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-03-15 15:26:20.575  INFO 7332 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@610d672b: startup date [Thu Mar 15 15:26:15 CST 2018]; root of context hierarchy
+2018-03-15 15:26:20.699  INFO 7332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.clom.my.controller.IndexController.index()
+2018-03-15 15:26:20.700  INFO 7332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public org.springframework.web.servlet.ModelAndView com.clom.my.controller.IndexController.indexs()
+2018-03-15 15:26:20.705  INFO 7332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/all/{pageNum}/{pageSize}],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object com.clom.my.controller.UserController.findAllUser(int,int)
+2018-03-15 15:26:20.706  INFO 7332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/add],produces=[application/json;charset=UTF-8]}" onto public int com.clom.my.controller.UserController.addUser(com.clom.my.model.User)
+2018-03-15 15:26:20.719  INFO 7332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-15 15:26:20.720  INFO 7332 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-15 15:26:20.917  INFO 7332 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 15:26:20.918  INFO 7332 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 15:26:21.054  INFO 7332 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 15:26:22.591  INFO 7332 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-03-15 15:26:23.364  INFO 7332 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-15 15:26:23.366  INFO 7332 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-03-15 15:26:23.373  INFO 7332 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-03-15 15:26:23.452  INFO 7332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2018-03-15 15:26:23.456  INFO 7332 --- [main] com.clom.my.MingyiApplication            : Started MingyiApplication in 9.016 seconds (JVM running for 16.314)
+2018-03-15 15:26:38.499  INFO 7332 --- [http-nio-80-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-15 15:26:38.499  INFO 7332 --- [http-nio-80-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-15 15:26:38.540  INFO 7332 --- [http-nio-80-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2018-03-15 15:26:38.757  INFO 7332 --- [http-nio-80-exec-10] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-03-15 15:26:45.050 DEBUG 7332 --- [http-nio-80-exec-10] c.c.m.d.UserMapper.selectAllUser_COUNT   : ==>  Preparing: SELECT count(0) FROM t_user 
+2018-03-15 15:26:45.079 DEBUG 7332 --- [http-nio-80-exec-10] c.c.m.d.UserMapper.selectAllUser_COUNT   : ==> Parameters: 
+2018-03-15 15:26:45.525 TRACE 7332 --- [http-nio-80-exec-10] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==    Columns: count(0)
+2018-03-15 15:26:45.525 TRACE 7332 --- [http-nio-80-exec-10] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==        Row: 24
+2018-03-15 15:26:45.527 DEBUG 7332 --- [http-nio-80-exec-10] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==      Total: 1
+2018-03-15 15:26:45.528 DEBUG 7332 --- [http-nio-80-exec-10] c.clom.my.dao.UserMapper.selectAllUser   : ==>  Preparing: select user_id, user_name, password, phone from t_user LIMIT 1 
+2018-03-15 15:26:45.528 DEBUG 7332 --- [http-nio-80-exec-10] c.clom.my.dao.UserMapper.selectAllUser   : ==> Parameters: 
+2018-03-15 15:26:45.980 TRACE 7332 --- [http-nio-80-exec-10] c.clom.my.dao.UserMapper.selectAllUser   : <==    Columns: user_id, user_name, password, phone
+2018-03-15 15:26:45.980 TRACE 7332 --- [http-nio-80-exec-10] c.clom.my.dao.UserMapper.selectAllUser   : <==        Row: 1000, 1, 123123123, 13800138000
+2018-03-15 15:26:45.981 DEBUG 7332 --- [http-nio-80-exec-10] c.clom.my.dao.UserMapper.selectAllUser   : <==      Total: 1
+2018-03-15 15:26:45.982 DEBUG 7332 --- [http-nio-80-exec-9] c.c.m.d.UserMapper.selectAllUser_COUNT   : ==>  Preparing: SELECT count(0) FROM t_user 
+2018-03-15 15:26:45.983 DEBUG 7332 --- [http-nio-80-exec-9] c.c.m.d.UserMapper.selectAllUser_COUNT   : ==> Parameters: 
+2018-03-15 15:26:46.427 TRACE 7332 --- [http-nio-80-exec-9] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==    Columns: count(0)
+2018-03-15 15:26:46.427 TRACE 7332 --- [http-nio-80-exec-9] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==        Row: 24
+2018-03-15 15:26:46.427 DEBUG 7332 --- [http-nio-80-exec-9] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==      Total: 1
+2018-03-15 15:26:46.427 DEBUG 7332 --- [http-nio-80-exec-9] c.clom.my.dao.UserMapper.selectAllUser   : ==>  Preparing: select user_id, user_name, password, phone from t_user LIMIT 1 
+2018-03-15 15:26:46.428 DEBUG 7332 --- [http-nio-80-exec-9] c.clom.my.dao.UserMapper.selectAllUser   : ==> Parameters: 
+2018-03-15 15:26:46.865 TRACE 7332 --- [http-nio-80-exec-9] c.clom.my.dao.UserMapper.selectAllUser   : <==    Columns: user_id, user_name, password, phone
+2018-03-15 15:26:46.866 TRACE 7332 --- [http-nio-80-exec-9] c.clom.my.dao.UserMapper.selectAllUser   : <==        Row: 1000, 1, 123123123, 13800138000
+2018-03-15 15:26:46.866 DEBUG 7332 --- [http-nio-80-exec-9] c.clom.my.dao.UserMapper.selectAllUser   : <==      Total: 1
+2018-03-15 15:27:02.988 DEBUG 7332 --- [http-nio-80-exec-8] c.c.m.d.UserMapper.selectAllUser_COUNT   : ==>  Preparing: SELECT count(0) FROM t_user 
+2018-03-15 15:27:02.989 DEBUG 7332 --- [http-nio-80-exec-8] c.c.m.d.UserMapper.selectAllUser_COUNT   : ==> Parameters: 
+2018-03-15 15:27:03.398 TRACE 7332 --- [http-nio-80-exec-8] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==    Columns: count(0)
+2018-03-15 15:27:03.398 TRACE 7332 --- [http-nio-80-exec-8] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==        Row: 24
+2018-03-15 15:27:03.398 DEBUG 7332 --- [http-nio-80-exec-8] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==      Total: 1
+2018-03-15 15:27:03.399 DEBUG 7332 --- [http-nio-80-exec-8] c.clom.my.dao.UserMapper.selectAllUser   : ==>  Preparing: select user_id, user_name, password, phone from t_user LIMIT 1 
+2018-03-15 15:27:03.399 DEBUG 7332 --- [http-nio-80-exec-8] c.clom.my.dao.UserMapper.selectAllUser   : ==> Parameters: 
+2018-03-15 15:27:03.810 TRACE 7332 --- [http-nio-80-exec-8] c.clom.my.dao.UserMapper.selectAllUser   : <==    Columns: user_id, user_name, password, phone
+2018-03-15 15:27:03.811 TRACE 7332 --- [http-nio-80-exec-8] c.clom.my.dao.UserMapper.selectAllUser   : <==        Row: 1000, 1, 123123123, 13800138000
+2018-03-15 15:27:03.811 DEBUG 7332 --- [http-nio-80-exec-8] c.clom.my.dao.UserMapper.selectAllUser   : <==      Total: 1
+2018-03-15 15:27:23.185  INFO 13428 --- [main] com.clom.my.MingyiApplication            : Starting MingyiApplication on 51jrq with PID 13428 (E:\workplace\project\boot\mingyi\target\classes started by clovermmmmmmmmmmmmm in E:\workplace\project\boot\mingyi)
+2018-03-15 15:27:23.195  INFO 13428 --- [main] com.clom.my.MingyiApplication            : The following profiles are active: dev
+2018-03-15 15:27:23.283  INFO 13428 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5fe01dde: startup date [Thu Mar 15 15:27:23 CST 2018]; root of context hierarchy
+2018-03-15 15:27:25.581  INFO 13428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2018-03-15 15:27:25.613  INFO 13428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-15 15:27:25.614  INFO 13428 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2018-03-15 15:27:25.626  INFO 13428 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_151\bin;E:\apache-maven-3.5.0\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\Program Files (x86)\gradle-4.3.1\bin;E:\scala-2.12.4\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\apache-ant-1.10.1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;F:\Program Files (x86)\sbt\bin;F:\downloads\play-2.2.6;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;;D:\Program Files\Microsoft VS Code\bin;.]
+2018-03-15 15:27:25.771  INFO 13428 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-15 15:27:25.772  INFO 13428 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2489 ms
+2018-03-15 15:27:26.121  INFO 13428 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-03-15 15:27:26.125  INFO 13428 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet statViewServlet mapped to [/druid/*]
+2018-03-15 15:27:26.133  INFO 13428 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-15 15:27:26.134  INFO 13428 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-15 15:27:26.134  INFO 13428 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-15 15:27:26.134  INFO 13428 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-15 15:27:26.134  INFO 13428 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-03-15 15:27:27.238  INFO 13428 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5fe01dde: startup date [Thu Mar 15 15:27:23 CST 2018]; root of context hierarchy
+2018-03-15 15:27:27.352  INFO 13428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.clom.my.controller.IndexController.index()
+2018-03-15 15:27:27.355  INFO 13428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public org.springframework.web.servlet.ModelAndView com.clom.my.controller.IndexController.indexs()
+2018-03-15 15:27:27.358  INFO 13428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/add],produces=[application/json;charset=UTF-8]}" onto public int com.clom.my.controller.UserController.addUser(com.clom.my.model.User)
+2018-03-15 15:27:27.359  INFO 13428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/all/{pageNum}/{pageSize}],produces=[application/json;charset=UTF-8]}" onto public java.lang.Object com.clom.my.controller.UserController.findAllUser(int,int)
+2018-03-15 15:27:27.364  INFO 13428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-15 15:27:27.365  INFO 13428 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-15 15:27:27.427  INFO 13428 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 15:27:27.428  INFO 13428 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 15:27:27.512  INFO 13428 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 15:27:27.955  INFO 13428 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-03-15 15:27:28.312  INFO 13428 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-15 15:27:28.313  INFO 13428 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-03-15 15:27:28.323  INFO 13428 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-03-15 15:27:28.390  INFO 13428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2018-03-15 15:27:28.394  INFO 13428 --- [main] com.clom.my.MingyiApplication            : Started MingyiApplication in 5.773 seconds (JVM running for 11.099)
+2018-03-15 15:27:56.391  INFO 13428 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-15 15:27:56.391  INFO 13428 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-15 15:27:56.420  INFO 13428 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2018-03-15 15:27:56.562  INFO 13428 --- [http-nio-80-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-03-15 15:28:01.427 DEBUG 13428 --- [http-nio-80-exec-1] c.c.m.d.UserMapper.selectAllUser_COUNT   : ==>  Preparing: SELECT count(0) FROM t_user 
+2018-03-15 15:28:01.450 DEBUG 13428 --- [http-nio-80-exec-1] c.c.m.d.UserMapper.selectAllUser_COUNT   : ==> Parameters: 
+2018-03-15 15:28:01.882 TRACE 13428 --- [http-nio-80-exec-1] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==    Columns: count(0)
+2018-03-15 15:28:01.882 TRACE 13428 --- [http-nio-80-exec-1] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==        Row: 24
+2018-03-15 15:28:01.884 DEBUG 13428 --- [http-nio-80-exec-1] c.c.m.d.UserMapper.selectAllUser_COUNT   : <==      Total: 1
+2018-03-15 15:28:01.885 DEBUG 13428 --- [http-nio-80-exec-1] c.clom.my.dao.UserMapper.selectAllUser   : ==>  Preparing: select user_id, user_name, password, phone from t_user LIMIT 1 
+2018-03-15 15:28:01.885 DEBUG 13428 --- [http-nio-80-exec-1] c.clom.my.dao.UserMapper.selectAllUser   : ==> Parameters: 
+2018-03-15 15:28:02.340 TRACE 13428 --- [http-nio-80-exec-1] c.clom.my.dao.UserMapper.selectAllUser   : <==    Columns: user_id, user_name, password, phone
+2018-03-15 15:28:02.340 TRACE 13428 --- [http-nio-80-exec-1] c.clom.my.dao.UserMapper.selectAllUser   : <==        Row: 1000, 1, 123123123, 13800138000
+2018-03-15 15:28:02.341 DEBUG 13428 --- [http-nio-80-exec-1] c.clom.my.dao.UserMapper.selectAllUser   : <==      Total: 1
+2018-03-15 15:36:00.915  INFO 16080 --- [main] com.clom.my.MingyiApplication            : Starting MingyiApplication on 51jrq with PID 16080 (E:\workplace\project\boot\mingyi\target\classes started by clovermmmmmmmmmmmmm in E:\workplace\project\boot\mingyi)
+2018-03-15 15:36:00.917  INFO 16080 --- [main] com.clom.my.MingyiApplication            : The following profiles are active: dev
+2018-03-15 15:36:00.974  INFO 16080 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3631aaef: startup date [Thu Mar 15 15:36:00 CST 2018]; root of context hierarchy
+2018-03-15 15:36:03.041  INFO 16080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2018-03-15 15:36:03.074  INFO 16080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-15 15:36:03.074  INFO 16080 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2018-03-15 15:36:03.085  INFO 16080 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_151\bin;E:\apache-maven-3.5.0\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\Program Files (x86)\gradle-4.3.1\bin;E:\scala-2.12.4\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\apache-ant-1.10.1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;F:\Program Files (x86)\sbt\bin;F:\downloads\play-2.2.6;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;;D:\Program Files\Microsoft VS Code\bin;.]
+2018-03-15 15:36:03.211  INFO 16080 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-15 15:36:03.212  INFO 16080 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2239 ms
+2018-03-15 15:36:03.557  INFO 16080 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-03-15 15:36:03.561  INFO 16080 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet statViewServlet mapped to [/druid/*]
+2018-03-15 15:36:03.568  INFO 16080 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-15 15:36:03.568  INFO 16080 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-15 15:36:03.569  INFO 16080 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-15 15:36:03.569  INFO 16080 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-15 15:36:03.569  INFO 16080 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-03-15 15:36:03.708  WARN 16080 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [E:\workplace\project\boot\mingyi\target\classes\com\clom\my\dao\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2018-03-15 15:36:03.713  INFO 16080 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-03-15 15:36:03.738  WARN 16080 --- [localhost-startStop-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2018-03-15 15:36:03.803  INFO 16080 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-03-15 15:36:03.807 ERROR 16080 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to auto-configure a DataSource: 'spring.datasource.url' is not specified and no embedded datasource could be auto-configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
