@@ -30,8 +30,8 @@ public class IndexController {
     }
     @RequestMapping("/index")
     public ModelAndView indexs(HttpServletRequest req, HttpServletResponse res){
-        log.debug("redis-->"+redisTemplate.opsForValue().get("123"));
-        redisTemplate.opsForValue().set("123",""+ Math.random());
+        //log.debug("redis-->"+redisTemplate.opsForValue().get("123"));
+        //redisTemplate.opsForValue().set("123",""+ Math.random());
         ModelAndView mv=new ModelAndView("index");//模板文件的名称，不需要指定后缀
         mv.addObject("key","what's you name ?");
         mv.addObject("key1","what's you name ?");

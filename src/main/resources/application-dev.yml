@@ -110,6 +110,7 @@ logging: #执行mybatis执行的sql
     com.clom.my.dao: debug  #debug 显示执行的sql   trace 显示查询sql以及查询结果
     com.clom.my.controller: debug
     com.clom.my.service: debug
+    com.clom.my.handler: debug
 #日志颜色
 output:
   ansi:

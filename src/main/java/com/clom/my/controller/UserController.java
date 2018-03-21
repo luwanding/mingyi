@@ -17,7 +17,7 @@ import java.util.List;
  * Created by clovermmmmmmmmmmmmm on 2018/3/12 0012.
  */
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/mobile/user")
 public class UserController {
     @Autowired
     private MyUserService userService;
