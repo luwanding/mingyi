@@ -1,10 +1,14 @@
 package com.clom.my.controller;
 
 import com.clom.my.base.APIConstants;
+import com.clom.my.base.BaseController;
 import com.clom.my.model.MyUser;
 import com.clom.my.service.MyUserService;
 import com.clom.my.util.mathUtil;
+import com.clom.my.util.result.MobilePackageBean;
+import com.clom.my.util.result.MobilePackageBeanTest;
 import com.clom.my.util.result.Result;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -18,7 +22,8 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/mobile/user")
-public class UserController {
+@Slf4j
+public class UserController extends BaseController{
     @Autowired
     private MyUserService userService;
 
@@ -28,11 +33,8 @@ public class UserController {
             if(result.hasErrors()){
                 StringBuffer msgBuffer = new StringBuffer();
                 List<ObjectError> errorList = result.getAllErrors();
-                for(ObjectError error : errorList){
-                    if(msgBuffer != null && msgBuffer.length() > 0){
-                        msgBuffer.append("|");
-                    }
-                    msgBuffer.append(error.getDefaultMessage());
+                if(errorList.size() > 0){
+                    msgBuffer.append(errorList.get(0).getDefaultMessage());
                 }
                 return mathUtil.error(APIConstants.API_RETURN_CODE_VALIDATOR,msgBuffer.toString());
             }
@@ -47,5 +49,14 @@ public class UserController {
     public Object findAllUser(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize) throws Exception{
 
         return userService.findAllUser(pageNum,pageSize);
+    }
+
+    @PostMapping(value = "/save")
+    public Result saveUserinfo(@Valid @RequestBody MobilePackageBeanTest mobile,BindingResult result){
+        Result validResult = checkValid(result);
+        if(validResult != null){
+            return  validResult;
+        }
+        return mathUtil.success("请求成功");
     }
 }
